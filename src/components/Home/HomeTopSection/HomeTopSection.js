@@ -1,7 +1,7 @@
 import styles from './HomeTopSection.module.scss';
 import Button from '../../../ui/Button';
-import Dodo from '../../../ui/icons/Dodo';
-import Slogan from '../../../ui/icons/Slogan';
+import Dodo from '../../../ui/Icons/Dodo';
+import Slogan from '../../../ui/Icons/Slogan';
 import Input from '../../../ui/Input';
 
 const HomeTopSection = () => {

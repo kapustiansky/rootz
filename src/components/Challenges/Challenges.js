@@ -1,6 +1,6 @@
 import styles from './Challenges.module.scss';
-import ChallengesBgLg from '../../ui/icons/ChallengesBgLg';
-import ChallengesBgSm from '../../ui/icons/ChallengesBgSm';
+import ChallengesBgLg from '../../ui/Icons/ChallengesBgLg';
+import ChallengesBgSm from '../../ui/Icons/ChallengesBgSm';
 import { useState, useEffect } from 'react';
 
 const Challenges = () => {

@@ -1,6 +1,6 @@
 import styles from './GetStarted.module.scss';
 import Form from '../Form';
-import FormLeaves from '../../ui/icons/FormLeaves';
+import FormLeaves from '../../ui/Icons/FormLeaves';
 
 const GetStarted = () => {
 	return (

@@ -1,0 +1,134 @@
+.footer {
+	padding-bottom: 96px;
+	padding-top: 88px;
+	background: $bg;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.footer_wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+
+	@media screen and (max-width: 640px) {
+		flex-flow: row wrap;
+	}
+}
+
+.left {
+	max-width: 200px;
+
+	@media screen and (max-width: 640px) {
+		width: 100%;
+		max-width: none;
+	}
+}
+
+.left_title {
+	font-family: 'Poppins-Bold';
+	font-size: 2.125rem;
+	line-height: 48px;
+	text-transform: uppercase;
+	color: $gray2;
+	padding-bottom: 32px;
+
+	@media screen and (max-width: 640px) {
+		font-size: 1.75rem;
+		padding-bottom: 0;
+	}
+}
+
+.left_text {
+	font-size: 0.8125rem;
+	line-height: 24px;
+	letter-spacing: 0.3px;
+	color: $gray2;
+	mix-blend-mode: normal;
+
+	@media screen and (max-width: 640px) {
+		font-size: 0.75rem;
+	}
+}
+
+.center {
+	max-width: 200px;
+
+	@media screen and (max-width: 640px) {
+		max-width: 144px;
+	}
+}
+
+.center_title {
+	font-family: 'Poppins-Bold';
+	font-size: 1.25rem;
+	line-height: 32px;
+	letter-spacing: 0.3px;
+	color: $gray2;
+	mix-blend-mode: normal;
+	padding-top: 10px;
+	padding-bottom: 32px;
+
+	@media screen and (max-width: 640px) {
+		font-size: 1.125rem;
+		padding-top: 0;
+		padding-bottom: 15px;
+	}
+}
+
+.center_text {
+	font-size: 0.8125rem;
+	line-height: 24px;
+	letter-spacing: 0.3px;
+	color: $gray2;
+	mix-blend-mode: normal;
+
+	@media screen and (max-width: 640px) {
+		font-size: 0.75rem;
+	}
+}
+
+.right {
+	max-width: 200px;
+
+	@media screen and (max-width: 640px) {
+		max-width: 144px;
+	}
+}
+
+.right_title {
+	font-family: 'Poppins-Bold';
+	font-size: 1.25rem;
+	line-height: 32px;
+	letter-spacing: 0.3px;
+	color: $gray2;
+	mix-blend-mode: normal;
+	padding-top: 10px;
+	padding-bottom: 32px;
+
+	@media screen and (max-width: 640px) {
+		font-size: 1.125rem;
+		padding-top: 0;
+		padding-bottom: 15px;
+	}
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+}
+
+.social_item {
+	width: 32px;
+	height: 32px;
+	flex-shrink: 0;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
+	}
+}

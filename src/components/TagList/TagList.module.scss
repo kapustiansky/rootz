@@ -1,0 +1,12 @@
+.tags_wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+
+	@media screen and (max-width: 768px) {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 50px;
+	}
+}

@@ -1,0 +1,197 @@
+@import './reboot.scss';
+@import './fonts.scss';
+@import './colors.scss';
+
+:root {
+	--randomColor: #43a3a8;
+}
+
+* {
+	font-family: 'Poppins-Regular';
+	font-size: 1rem;
+	color: $black;
+}
+
+/* Works on Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: $royalBlue $cornflowerLilac;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: $cornflowerLilac;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: $royalBlue;
+	border-radius: 5px;
+	border: 3px solid $royalBlue;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background: $white;
+}
+
+body > div {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: $royalBlue;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+img {
+	font-size: 11px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input[type='text']::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type='text']::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+	display: none;
+}
+
+button {
+	border: none;
+	background: none;
+	-webkit-appearance: none;
+}
+
+.container {
+	width: 100%;
+	max-width: 1316px;
+	padding: 0 18px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1156px;
+	padding: 0 18px;
+	margin: 0 auto;
+}
+
+.show-up-anim,
+.svg-letter-anim {
+	opacity: 0;
+}
+
+/////////////SWIPER////////////////////////
+
+.swiper-button-disabled {
+	opacity: 0.5;
+	cursor: auto !important;
+
+	&:hover {
+		opacity: 0.5 !important;
+	}
+}
+
+.travel-swiper {
+	.swiper-pagination {
+		bottom: 0 !important;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: $black !important;
+	}
+
+	.swiper-pagination-bullet {
+		width: 11px;
+		height: 11px;
+		margin: 0 7px !important;
+		background: transparent;
+		opacity: 1;
+		border: 1px solid $black;
+	}
+}
+
+.ecology-swiper {
+	.swiper-wrapper {
+		align-items: center;
+	}
+}
+
+/////////////////////////////////////////////
+//////////////LOGO ANIMATION/////////////////
+
+.petal,
+.petal2,
+.petal3 {
+	transition: transform 0.3s;
+}
+
+.logo:hover {
+	.petal2 {
+		transform: scaleX(0.9);
+	}
+
+	.petal {
+		transform: skew(0, -8deg);
+	}
+
+	.petal3 {
+		transform: skew(0, -8deg);
+	}
+}
+
+.letter {
+	transition: fill 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.logo:hover {
+	.letter {
+		fill: var(--randomColor);
+	}
+}

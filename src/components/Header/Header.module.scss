@@ -1,10 +1,10 @@
 .header {
 	z-index: 3;
-	background: $bg;
-	position: relative;
+	position: fixed;
+	left: 0;
+	top: 0;
 	width: 100%;
-	max-width: 1920px;
-	margin: 0 auto;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
 	hr {
 		height: 4px;
@@ -13,6 +13,18 @@
 		border: none;
 		margin: 0;
 	}
+}
+
+.header.hide {
+	top: -100%;
+}
+
+.wrapper {
+	background: $bg;
+	position: relative;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
 }
 
 .header_container {
@@ -56,10 +68,5 @@
 		transform: translateX(-100vw);
 		overflow-y: auto;
 		overflow-x: hidden;
-		// transition: transform 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 	}
-
-	// &.active {
-	// 	transform: translateX(0);
-	// }
 }

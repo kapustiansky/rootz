@@ -7,6 +7,7 @@ import MenuBtn from './MenuBtn';
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
 import { menuNavigation, randomColor } from '../../features/mainAnimations';
+import useScrollDirection from '../../hooks/useScrollDirection';
 
 const data = {
 	menu: [
@@ -32,6 +33,7 @@ const data = {
 const Header = () => {
 	const [isActiveMenu, setActiveMenu] = useState(false);
 	const [isMobile, setMobile] = useState(false);
+	const [scrollDirection, scrollY] = useScrollDirection();
 	const router = useRouter();
 
 	const toggleMenu = () => {
@@ -92,32 +94,37 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className={styles.header}>
-			<div className='container'>
-				<div className={styles.header_container}>
-					<Link href='/'>
-						<a className={styles.logo}>
-							<Logo />
-						</a>
-					</Link>
-					<div
-						className={`menu-anim-wrapper ${
-							styles.menu_container
-						} ${isActiveMenu ? 'active' : ''}`}>
-						<NavList menu={data.menu} />
-						<Button
-							type='button'
-							text='Apply'
-							clazz={'header_apply'}
-							animation={'menu-anim-item'}
+		<header
+			className={`${styles.header} ${
+				scrollY > 130 && scrollDirection === 'down' ? styles.hide : ''
+			}`}>
+			<div className={styles.wrapper}>
+				<div className='container'>
+					<div className={styles.header_container}>
+						<Link href='/'>
+							<a className={styles.logo}>
+								<Logo />
+							</a>
+						</Link>
+						<div
+							className={`menu-anim-wrapper ${
+								styles.menu_container
+							} ${isActiveMenu ? 'active' : ''}`}>
+							<NavList menu={data.menu} />
+							<Button
+								type='button'
+								text='Apply'
+								clazz={'header_apply'}
+								animation={'menu-anim-item'}
+							/>
+						</div>
+						<MenuBtn
+							toggleMenu={toggleMenu}
+							isActiveMenu={isActiveMenu}
 						/>
 					</div>
-					<MenuBtn
-						toggleMenu={toggleMenu}
-						isActiveMenu={isActiveMenu}
-					/>
+					<hr></hr>
 				</div>
-				<hr></hr>
 			</div>
 		</header>
 	);

@@ -4,6 +4,11 @@
 
 :root {
 	--randomColor: #43a3a8;
+	--headerH: 120.4px;
+
+	@media screen and (max-width: 768px) {
+		--headerH: 106px;
+	}
 }
 
 * {
@@ -50,6 +55,7 @@ body > div {
 
 main {
 	flex: 1 1 auto;
+	padding-top: var(--headerH);
 }
 
 ul {
